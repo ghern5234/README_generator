@@ -5,7 +5,7 @@ function renderLicenseBadge(license) {
     case 'MIT':
       return ("![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)")
     case 'APACHE 2.0':
-      return (["![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)"])
+      return ("![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)")
     case 'GPL 3.0':
       return ("![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)")
     case 'BSD 3.0':
@@ -15,33 +15,43 @@ function renderLicenseBadge(license) {
   };
 }
 
+
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  switch (license) {
-    case 'MIT':
-      return ("(https://opensource.org/licenses/MIT)")
-    case 'APACHE 2.0':
-      return ("(https://opensource.org/licenses/Apache-2.0)")
-    case 'GPL 3.0':
-      return ("(https://www.gnu.org/licenses/gpl-3.0)")
-    case 'BSD 3.0':
-      return ("(https://opensource.org/licenses/BSD-3-Clause)")
-    default:
-      return ("")
-
-  };
+  
+  if(license === 'None') {
+    return ''
+  } else {
+    return  "- [License](#License) \n"
+  }
 }
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  
+  let licenseLink; 
+  switch (license) {
+    case 'MIT':
+      licenseLink = ("(https://opensource.org/licenses/MIT)")
+    case 'APACHE 2.0':
+      licenseLink = ("(https://opensource.org/licenses/Apache-2.0)")
+    case 'GPL 3.0':
+      licenseLink = ("(https://www.gnu.org/licenses/gpl-3.0)")
+    case 'BSD 3.0':
+      licenseLink = ("(https://opensource.org/licenses/BSD-3-Clause)")
+    default:
+      licenseLink = ("")
+
+  };
+  if(license === 'None'){
+    return ''
+  } else {
+    return `## License
+  For more information on the licensing, please visit: ${licenseLink}`
+  }
 }
-
-
-
-//Function to iterate through table of contents array
 
 
 
@@ -60,7 +70,7 @@ function generateMarkdown(data) {
   ## Table of Contents
   - [Installation](#Installation) \n
   - [Usage](#Usage) \n
-  - [License](#License) \n
+  ${renderLicenseLink(data.license)} \n
   - [Contributing](#Contributing) \n
   - [Test](#Test) \n
   - [Questions](#Questions) \n
@@ -74,12 +84,10 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  
-  ## License
-  For more information on the licensing, please visit: ${renderLicenseLink(data.license)}
 
-  
-  
+  ${renderLicenseSection(data.license)}
+
+    
   ## Contributing
   ${data.contribution}
 
@@ -95,6 +103,7 @@ function generateMarkdown(data) {
   GitHub: ${data.github}
   
   Email: ${data.email}
+
   
   
 

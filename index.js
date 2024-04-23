@@ -68,18 +68,6 @@ const questions = [
       "What are some questions that may come up when working with your project? Please also provide answers to those questions.",
     name: "questions",
   },
-  {
-    type: 'checkbox',
-    name: 'selections',
-    message: 'Which of the following are you including in your Table of Contents?',
-    choices: [
-      'Installation',
-      'Usage',
-      'Contributing',
-      'Tests',
-      'Questions'
-    ]
-}
 ];
 
 
@@ -99,7 +87,7 @@ function init() {
     console.log(userAnswers);
     
 
-    writeToFile("README.md", generateMarkDown({ ...userAnswers }))
+    writeToFile("EXAMPLE-README.md", generateMarkDown({ ...userAnswers }))
     
 })
 };

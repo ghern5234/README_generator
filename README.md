@@ -1,58 +1,20 @@
-# Test
-  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# README Generator
+
+## Description
+
+This is a application designed to create a README markdown for those who need a professional and high-quality README for their projects.
+
+- The motivation for the project was to make the process of writing a README simple, fast and efficient
+- I built this project to help those creating new project, create a README file in the correct format.
+- It solves needing to create a README from scratch everytime.
+- I learned how to import and export data, use switch/case, and how to write new files using the terminal/code.
 
 
+## Installation
 
-  ## Description
-  This is a test
+Make sure to have node installed to utilitize the application after cloning the repository to your local environment.
 
-
-
-  ## Table of Contents
-  - [Installation](#Installation) 
-
-  - [Usage](#Usage) 
-
-  - [License](#License) 
- 
-
-  - [Contributing](#Contributing) 
-
-  - [Test](#Test) 
-
-  - [Questions](#Questions) 
+## Usage
 
 
-
-
-  ## Installation
-  Lorem
-
-
-  ## Usage
-  Use this project to generate a read me 
-
-
-  ## License
-  For more information on the licensing, please visit: 
-
-    
-  ## Contributing
-  
-
-  
-  ## Test
-  
-  
- 
-  ## Questions
-
-  
-
-  GitHub: 
-  
-  Email: 
-
-  
-  
 

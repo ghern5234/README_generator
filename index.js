@@ -21,7 +21,7 @@ const questions = [
     type: "input",
     message:
       "How is your project installed? Provide clear and detailed instructions.",
-    name: "install",
+    name: "installation",
   },
   {
     type: "input",
@@ -44,22 +44,22 @@ const questions = [
     type: "input",
     message:
       "How can others contribute to your project? Provide clear guidelines and instructions.",
-    name: "contribution",
+    name: "contributing",
   },
   {
     type: "input",
     message:
       "Please enter clear guidance on testing. ie. details about testing frameworks, instructions on how to test locally or how to contribute to testing efforts.",
-    name: "testing",
+    name: "tests",
   },
   {
     type: "input",
-    message: "What is your GitHub contact info? If possible, please insert a url link.",
+    message: "What is your GitHub username? Leave empty if you do not wish to include.",
     name: "github",
   },
   {
     type: "input",
-    message: "What is your email address?",
+    message: "What is your email address? If you do not wish to include, leave blank",
     name: "email",
   },
   {
@@ -68,6 +68,7 @@ const questions = [
       "What are some questions that may come up when working with your project? Please also provide answers to those questions.",
     name: "questions",
   },
+
 ];
 
 
@@ -83,6 +84,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer
   .prompt(questions)
+ 
   .then((userAnswers) => {
     console.log(userAnswers);
     

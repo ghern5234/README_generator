@@ -7,7 +7,7 @@ This is a application designed to create a README markdown for those who need a 
 - The motivation for the project was to make the process of writing a README simple, fast and efficient
 - I built this project to help those creating new project, create a README file in the correct format.
 - It solves needing to create a README from scratch everytime.
-- I learned how to import and export data, use switch/case, and how to write new files using the terminal/code.
+- I learned how to import and export data, use switch/case, and how to write new files using the terminal/node.
 
 
 ## Installation

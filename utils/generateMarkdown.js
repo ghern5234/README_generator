@@ -101,6 +101,9 @@ function renderTableOfContents(data) {
   
   const dataArray = Object.entries(data);
   const values = dataArray[1];
+  
+  //If statement that checks if license = none and removes it from the array if so
+
 
   let tableOfContents = "## Table of Contents \n";
 
@@ -109,6 +112,7 @@ function renderTableOfContents(data) {
       tableOfContents += `- [${capitalize(element[0])}](#${capitalize(element[0])}) \n`;
     }
     });
+
 
   tableOfContents += `- [License](#License) \n`;
 

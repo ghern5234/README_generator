@@ -1,27 +1,28 @@
 # Dog
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 
 
 ## Description
-  This is a test
+  a;lsfdkj
 
   
 ## Table of Contents 
 - [Title](#Title) 
 - [Description](#Description) 
+- [Installation](#Installation) 
+- [Usage](#Usage) 
+- [Documentation](#Documentation) 
 - [License](#License) 
+- [Contributing](#Contributing) 
+- [Tests](#Tests) 
 - [Github](#Github) 
 - [Email](#Email) 
-- [License](#License) 
+- [Questions](#Questions) 
 
 
 
-## Questions 
+ ## Questions 
 
- 
 
-ghernandez@utexas.edu 
-
-[ghern5234](https://github.com/ghern5234)
 
 

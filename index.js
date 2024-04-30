@@ -80,14 +80,14 @@ function writeToFile(fileName, data) {
 
 
 
+
 // TODO: Create a function to initialize app
 function init() {
   inquirer
   .prompt(questions)
  
   .then((userAnswers) => {
-    console.log(userAnswers);
-    
+    // const capitalizedKeys = capitalize(userAnswers);
 
     writeToFile("EXAMPLE-README.md", generateMarkDown({ ...userAnswers }))
     

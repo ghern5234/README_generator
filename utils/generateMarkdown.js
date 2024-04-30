@@ -26,18 +26,18 @@ function renderLicenseLink(license) {
 }
 
 //Function to generate section based on user input
-function renderSection(data) {
-  const keys = Object.keys(data);
-  const values = Object.values(data);
+// function renderSection(data) {
+  // const keys = Object.keys(data);
+  // const values = Object.values(data);
 
-  console.log(keys)
-  console.log(values)
+//   console.log(keys)
+//   console.log(values)
 
-  // console.log(dataArray)
+//   console.log(dataArray)
 
-  // let title = keys[0].toUpperCase() + keys.slice(1);
+//   let title = keys[0].toUpperCase() + keys.slice(1);
 
-  //If key is empty, skip and do not create section\
+//   If key is empty, skip and do not create section\
 // for
 //   if(!values === ""){
 //     return `## ${title} \n
@@ -45,25 +45,25 @@ function renderSection(data) {
 //   } else {
 //    return ""
 //   }
-}
+// }
 
 // function renderSection(data){
 //   for(key in data)
 // }
 
 //function
-function renderSection(data) {
+// function renderSection(data) {
   
   
   
-  for (let section in data) {
-    if(section > 0 ){
-      return
-    }
-  }
+//   for (let section in data) {
+//     if(section > 0 ){
+//       return
+//     }
+//   }
 
-  return response;
-}
+//   return response;
+// }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -89,24 +89,26 @@ function renderLicenseSection(license) {
   }
 }
 
+//Function to capitalize the userAnswers 
+function capitalize(str){
+  
+    return str.charAt(0).toUpperCase() + str.slice(1)
+
+}
+
 // //Function to create Table of Contents based on choices
 function renderTableOfContents(data) {
   
   const dataArray = Object.entries(data);
   const values = dataArray[1];
-  console.log(values)
-
-
 
   let tableOfContents = "## Table of Contents \n";
 
-  dataArray.forEach(function (element) {
-    if(!values[1] === '') {
-      tableOfContents += `- [${element}](#${element}) \n`;
-    } else {
-      console.log('this is empty')
+  dataArray.forEach(function(element) {
+    if(!element[1] == '') {
+      tableOfContents += `- [${capitalize(element[0])}](#${capitalize(element[0])}) \n`;
     }
-  });
+    });
 
   tableOfContents += `- [License](#License) \n`;
 
@@ -124,6 +126,11 @@ function renderDescription(data) {
 }
 
 
+//
+function renderQuestions(data) {
+  
+}
+
 
 
 
@@ -131,7 +138,7 @@ function renderDescription(data) {
 //Function to render contact info
 function renderContactInfo(data) {
   if (!data.github && !data.email) {
-    return;
+    return "";
   } else if (!data.github) {
     return data.email;
   } else if (!data.email) {
@@ -154,7 +161,7 @@ ${renderDescription(data.description)}
   
 ${renderTableOfContents(data)}
 
-${renderSection(data)}
+
 
 
 ${renderContactInfo(data)}

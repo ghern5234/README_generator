@@ -89,7 +89,7 @@ function renderLicenseSection(license) {
   }
 }
 
-//Function to capitalize the userAnswers 
+//Function to capitalize the userAnswer key
 function capitalize(str){
   
     return str.charAt(0).toUpperCase() + str.slice(1)
@@ -126,9 +126,23 @@ function renderDescription(data) {
 }
 
 
-//
-function renderQuestions(data) {
-  
+//if no questions AND either (email or github) then render contact section otherwise render Question section
+function renderQuestionsSection(data) {
+  if(!data.questions && !data.github) {
+    return ` ## Questions \n
+${data.email}`
+  } else if(!data.questions && !data.email) {
+    return `## Questions \n
+${data.email}
+[${data.github}](https://github.com/${data.github})`
+  } else {
+    return `## Questions \n
+${data.questions} \n
+${data.email} \n
+[${data.github}](https://github.com/${data.github})`
+  }
+
+
 }
 
 
@@ -136,7 +150,7 @@ function renderQuestions(data) {
 
 
 //Function to render contact info
-function renderContactInfo(data) {
+function renderContactSection(data) {
   if (!data.github && !data.email) {
     return "";
   } else if (!data.github) {
@@ -162,9 +176,7 @@ ${renderDescription(data.description)}
 ${renderTableOfContents(data)}
 
 
-
-
-${renderContactInfo(data)}
+${renderQuestionsSection(data)}
 
 
 `;

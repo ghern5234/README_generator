@@ -68,7 +68,7 @@ function renderSection(data) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let licenseLink;
-  
+  console.log(license)
   switch (license) {
     case "MIT":
       licenseLink = "(https://opensource.org/licenses/MIT)";
@@ -96,11 +96,12 @@ function renderTableOfContents(data) {
   // const values = dataArray[1];
   console.log(dataArray)
   //If statement that checks if license = none and removes it from the array if so
-
+  
+  let filteredData = dataArray.filter(entry => entry[0] !== 'email' && entry[0] !== 'github');
 
   let tableOfContents = "## Table of Contents \n";
 
-  dataArray.forEach(function(element) {
+  filteredData.forEach(function(element) {
     if(!element[1] == '') {
       tableOfContents += `- [${capitalize(element[0])}](#${capitalize(element[0])}) \n`;
     }});

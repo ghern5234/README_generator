@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// A function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT":
@@ -15,8 +14,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// A function that returns the license link
 function renderLicenseLink(license) {
   if (license === "None") {
     return "";
@@ -25,7 +23,7 @@ function renderLicenseLink(license) {
   }
 }
 
-//Function to capitalize the userAnswer key
+//A function to capitalize the userAnswer key
 function capitalize(str){
   
   return str.charAt(0).toUpperCase() + str.slice(1)
@@ -33,7 +31,7 @@ function capitalize(str){
 }
 
 
-//Function to generate section based on user input
+//A function to generate section based on user input
 function renderSection(data) {
 
   const dataArray = Object.entries(data);
@@ -64,8 +62,7 @@ function renderSection(data) {
   
 
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// A function that returns the license section of README
 function renderLicenseSection(license) {
   let licenseLink;
   console.log(license)
@@ -93,16 +90,13 @@ function renderLicenseSection(license) {
   }
 }
 
-// //Function to create Table of Contents based on choices
+// A function to create Table of Contents 
 function renderTableOfContents(data) {
   
   const dataArray = Object.entries(data);
-  // const values = dataArray[1];
-  console.log(dataArray)
-  //If statement that checks if license = none and removes it from the array if so
-  
-  let filteredData = dataArray.filter(entry => entry[0] !== 'email' && entry[0] !== 'github');
 
+  let filteredData = dataArray.filter(entry => entry[0] !== 'email' && entry[0] !== 'github');
+  
   let tableOfContents = "## Table of Contents \n";
 
   filteredData.forEach(function(element) {
@@ -114,7 +108,7 @@ function renderTableOfContents(data) {
   return tableOfContents;
 }
 
-//Function to render project description of project
+// A function to render project description of project
 function renderDescription(data) {
   if (data.length > 0) {
     return `## Description
@@ -125,7 +119,7 @@ function renderDescription(data) {
 }
 
 
-//if no questions AND either (email or github) then render contact section otherwise render Question section
+// A function to add contact info to the question section
 function renderQuestionsSection(data) {
   
   let questionsSection = ""
@@ -152,7 +146,7 @@ questionsSection = `## Questions \n` + questionsSection
 
 
 
-// TODO: Create a function to generate markdown for README
+// A function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 ${renderLicenseBadge(data.license)}

@@ -25,50 +25,50 @@ function renderLicenseLink(license) {
   }
 }
 
+//Function to capitalize the userAnswer key
+function capitalize(str){
+  
+  return str.charAt(0).toUpperCase() + str.slice(1)
+
+}
+
+
 //Function to generate section based on user input
-// function renderSection(data) {
-  // const keys = Object.keys(data);
-  // const values = Object.values(data);
+function renderSection(data) {
 
-//   console.log(keys)
-//   console.log(values)
+  const dataArray = Object.entries(data);
+  const dataArray2 = dataArray.slice(2)
+  let sections = ""
 
-//   console.log(dataArray)
+  dataArray2.forEach(function(element) {
+    if (element[0].includes("questions")) {
+      return
+    }
+    if (element[0].includes("github")) {
+      return
+    }
+    if (element[0].includes("email")) {
+      return
+    }
 
-//   let title = keys[0].toUpperCase() + keys.slice(1);
+    if(element[0].includes("license")) {
+     sections += `${renderLicenseSection(data.license)} \n \n`
+    }
+    if(!element[1] == '') {
+      sections += `## ${capitalize(element[0])}
+  ${element[1]} \n \n`
+    }});
+  return sections
+  }
 
-//   If key is empty, skip and do not create section\
-// for
-//   if(!values === ""){
-//     return `## ${title} \n
-//     ${values} \n`;
-//   } else {
-//    return ""
-//   }
-// }
-
-// function renderSection(data){
-//   for(key in data)
-// }
-
-//function
-// function renderSection(data) {
   
-  
-  
-//   for (let section in data) {
-//     if(section > 0 ){
-//       return
-//     }
-//   }
 
-//   return response;
-// }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let licenseLink;
+  
   switch (license) {
     case "MIT":
       licenseLink = "(https://opensource.org/licenses/MIT)";
@@ -85,23 +85,16 @@ function renderLicenseSection(license) {
     return "";
   } else {
     return `## License
-  For more information on the licensing, please visit: ${licenseLink}`;
+  For more information on the licensing, please visit: ${licenseLink} \n`;
   }
-}
-
-//Function to capitalize the userAnswer key
-function capitalize(str){
-  
-    return str.charAt(0).toUpperCase() + str.slice(1)
-
 }
 
 // //Function to create Table of Contents based on choices
 function renderTableOfContents(data) {
   
   const dataArray = Object.entries(data);
-  const values = dataArray[1];
-  
+  // const values = dataArray[1];
+  console.log(dataArray)
   //If statement that checks if license = none and removes it from the array if so
 
 
@@ -110,11 +103,8 @@ function renderTableOfContents(data) {
   dataArray.forEach(function(element) {
     if(!element[1] == '') {
       tableOfContents += `- [${capitalize(element[0])}](#${capitalize(element[0])}) \n`;
-    }
-    });
+    }});
 
-
-  tableOfContents += `- [License](#License) \n`;
 
   return tableOfContents;
 }
@@ -132,44 +122,33 @@ function renderDescription(data) {
 
 //if no questions AND either (email or github) then render contact section otherwise render Question section
 function renderQuestionsSection(data) {
-  if(!data.questions && !data.github) {
-    return ` ## Questions \n
-${data.email}`
-  } else if(!data.questions && !data.email) {
-    return `## Questions \n
-${data.email}
-[${data.github}](https://github.com/${data.github})`
-  } else {
-    return `## Questions \n
-${data.questions} \n
-${data.email} \n
-[${data.github}](https://github.com/${data.github})`
+  
+  let questionsSection = ""
+
+  if(data.questions) {
+    questionsSection += `FAQ: ${data.questions} \n \n`
+  } 
+  
+if(data.email) {
+    questionsSection += `Email: ${data.email} \n \n`
+  } 
+  
+if(data.github) {
+    questionsSection += `GitHub: ${data.github} \n \n`
   }
+
+if(questionsSection) {
+questionsSection = `## Questions \n` + questionsSection
+}
+    return questionsSection
 
 
 }
 
 
-
-
-
-//Function to render contact info
-function renderContactSection(data) {
-  if (!data.github && !data.email) {
-    return "";
-  } else if (!data.github) {
-    return data.email;
-  } else if (!data.email) {
-    return `[${data.github}](https://github.com/${data.github}) \n`;
-  } else {
-    return `${data.email} \n
-  [${data.github}](https://github.com/${data.github}) \n`;
-  }
-}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  console.log("This is description !! = ", data.description);
   return `# ${data.title}
 ${renderLicenseBadge(data.license)}
 
@@ -178,6 +157,9 @@ ${renderDescription(data.description)}
 
   
 ${renderTableOfContents(data)}
+
+
+${renderSection(data)}
 
 
 ${renderQuestionsSection(data)}

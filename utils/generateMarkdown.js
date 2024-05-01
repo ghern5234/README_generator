@@ -72,12 +72,16 @@ function renderLicenseSection(license) {
   switch (license) {
     case "MIT":
       licenseLink = "(https://opensource.org/licenses/MIT)";
+      break;
     case "APACHE 2.0":
       licenseLink = "(https://opensource.org/licenses/Apache-2.0)";
+      break;
     case "GPL 3.0":
       licenseLink = "(https://www.gnu.org/licenses/gpl-3.0)";
+      break;
     case "BSD 3.0":
       licenseLink = "(https://opensource.org/licenses/BSD-3-Clause)";
+      break;
     default:
       licenseLink = "";
   }

@@ -99,7 +99,7 @@ function renderTableOfContents(data) {
 
   filteredData.forEach(function(element) {
     if(!element[1] == '') {
-      tableOfContents += `- [${capitalize(element[0])}](#${capitalize(element[0])}) \n`;
+      tableOfContents += `- [${capitalize(element[0])}](#${(element[0])}) \n`;
     }});
 
 

@@ -18,7 +18,6 @@ This is a application designed to generate custom README files for your projects
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Configuration](#configuration)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -47,7 +46,7 @@ This is a application designed to generate custom README files for your projects
 
 - Use the `node index.js` command in your command-line to launch the application.
 - Answer the prompts in the command-line if you wish to include those sections in your README. If not, leave the section blank and the section won't be rendered in the md.
-- For a visual demonstration, please refer to the [tutorial video]()
+- For a visual demonstration, please refer to the [tutorial video](https://drive.google.com/file/d/1Nuw-3rGTXOaPrEzs11j0TqGkHvrykzhG/view)
 
 
 

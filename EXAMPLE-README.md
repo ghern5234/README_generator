@@ -1,9 +1,9 @@
-# asdfasd
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+# Professional README Generator
+![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 
 
 ## Description
-  fasdfasdf
+  This is a command-line application for generating professional README files.
 
   
 ## Table of Contents 
@@ -11,41 +11,30 @@
 - [Description](#description) 
 - [Installation](#installation) 
 - [Usage](#usage) 
-- [Documentation](#documentation) 
 - [License](#license) 
 - [Contributing](#contributing) 
-- [Tests](#tests) 
-- [Questions](#questions) 
 
 
 
 ## Installation
-asdf 
+See tutorial video for details. 
  
 ## Usage
-asdfa 
- 
-## Documentation
-sdfa 
+Use this to generate README files 
  
 ## License
-For more information on the licensing, please visit: (https://opensource.org/licenses/MIT) 
+For more information on the licensing, please visit: (https://opensource.org/licenses/Apache-2.0) 
  
 ## Contributing
-asdf 
- 
-## Tests
-asfd 
+None at this time 
  
 
 
 
 ## Questions 
-FAQ: asdfa 
+Email: [ghern5234@gmail.com](mailto:ghern5234@gmail.com)</a> 
  
-Email: [asdf](mailto:asdf)</a> 
- 
-GitHub: <a href="https://github.com/asdf" target="_blank">asdf</a> 
+GitHub: <a href="https://github.com/ghern5234" target="_blank">ghern5234</a> 
  
 
 

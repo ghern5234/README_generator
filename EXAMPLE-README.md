@@ -1,4 +1,4 @@
-# Dog
+# asdfasdf
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
@@ -15,42 +15,30 @@
 - [License](#License) 
 - [Contributing](#Contributing) 
 - [Tests](#Tests) 
-- [Questions](#Questions) 
 
 
 
 ## Installation
-  asdfasdf 
+asdfasdf 
  
 ## Usage
-  asdfadsfa 
+asdfasdf 
  
 ## Documentation
-  asdfads 
+asdfasdf 
  
 ## License
-  For more information on the licensing, please visit: (https://opensource.org/licenses/MIT) 
- 
- 
-## License
-  MIT 
+For more information on the licensing, please visit: (https://opensource.org/licenses/MIT) 
  
 ## Contributing
-  dsafasdfas 
+asdfasdf 
  
 ## Tests
-  asdfasdf 
+asdfasd 
  
 
 
 
-## Questions 
-FAQ: asdf 
- 
-Email: asdf 
- 
-GitHub: asdf 
- 
 
 
 

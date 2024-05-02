@@ -14,14 +14,6 @@ function renderLicenseBadge(license) {
   }
 }
 
-// A function that returns the license link
-function renderLicenseLink(license) {
-  if (license === "None") {
-    return "";
-  } else {
-    return "- [License](#License) \n";
-  }
-}
 
 //A function to capitalize the userAnswer key
 function capitalize(str){
@@ -42,20 +34,26 @@ function renderSection(data) {
     if (element[0].includes("questions")) {
       return
     }
+
     if (element[0].includes("github")) {
       return
     }
+
     if (element[0].includes("email")) {
       return
     }
 
     if(element[0].includes("license")) {
-     sections += `${renderLicenseSection(data.license)} \n \n`
+element[1] = `${renderLicenseSection(data.license)}`
     }
-    if(!element[1] == '') {
+
+    if(element[1]) {
       sections += `## ${capitalize(element[0])}
-  ${element[1]} \n \n`
+${element[1]} \n \n`
     }});
+
+
+    
   return sections
   }
 
@@ -64,20 +62,21 @@ function renderSection(data) {
 
 // A function that returns the license section of README
 function renderLicenseSection(license) {
-  let licenseLink;
-  console.log(license)
+  
+  let licenseLink = "";
+
   switch (license) {
     case "MIT":
-      licenseLink = "(https://opensource.org/licenses/MIT)";
+      licenseLink += "(https://opensource.org/licenses/MIT)";
       break;
     case "APACHE 2.0":
-      licenseLink = "(https://opensource.org/licenses/Apache-2.0)";
+      licenseLink += "(https://opensource.org/licenses/Apache-2.0)";
       break;
     case "GPL 3.0":
-      licenseLink = "(https://www.gnu.org/licenses/gpl-3.0)";
+      licenseLink += "(https://www.gnu.org/licenses/gpl-3.0)";
       break;
     case "BSD 3.0":
-      licenseLink = "(https://opensource.org/licenses/BSD-3-Clause)";
+      licenseLink += "(https://opensource.org/licenses/BSD-3-Clause)";
       break;
     default:
       licenseLink = "";
@@ -85,8 +84,7 @@ function renderLicenseSection(license) {
   if (license === "None") {
     return "";
   } else {
-    return `## License
-  For more information on the licensing, please visit: ${licenseLink} \n`;
+    return `For more information on the licensing, please visit: ${licenseLink}`;
   }
 }
 

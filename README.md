@@ -36,7 +36,7 @@ This is a application designed to generate custom README files for your projects
 - Make sure to have node installed to utilitize the application.
 - Clone the repository to your local environment using `git clone `
 - Open the repo in a CLI.
-- Then, you can install the tool globally using npm i in the terminal along with the necessary dependencies.
+- Then, you can install the tool globally using `npm i` in the terminal along with the necessary dependencies.
 
 
 
@@ -45,7 +45,7 @@ This is a application designed to generate custom README files for your projects
 - Use the `node index.js` command in your command-line to launch the application.
 - Answer the prompts in the command-line if you wish to include those sections in your README.
 - If you do not wish to include a section, leave the answer blank and the section will not be rendered.
-- For a visual demonstration, please refer to the [tutorial video](https://drive.google.com/file/d/1kDq4fHKREkFLZGivY_sZZGz22gUMCAoO/view)
+- For a visual demonstration, please refer to the [tutorial video](https://drive.google.com/file/d/1kDq4fHKREkFLZGivY_sZZGz22gUMCAoO/view).
 
 
 

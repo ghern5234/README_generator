@@ -6,10 +6,9 @@
 
 This is a application designed to generate custom README files for your projects with ease. This tool allows you to create a basic structure for your README file with common sections like project description, installation, usage, and more.
 
-- The motivation for the project was to make the process of writing a README simple, fast and efficient.
-- I built this project to help those creating new project, create a README file in the correct format.
-- It solves needing to create a README from scratch everytime.
-- I learned how to import and export data, use switch/case, and how to write new files using the terminal/node.
+- The motivation behind this project was to make the process of writing a README file simple, fast and efficient.
+- I built this application to help users save time and ensure their README file is profesional and functional.
+- This project taught me how to import and export data, use switch/case, the power and differences in iterating through an array vs an object and how to use the inquire package in a node project.
 
 
 
@@ -19,7 +18,6 @@ This is a application designed to generate custom README files for your projects
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 
 
@@ -45,7 +43,8 @@ This is a application designed to generate custom README files for your projects
 ## Usage
 
 - Use the `node index.js` command in your command-line to launch the application.
-- Answer the prompts in the command-line if you wish to include those sections in your README. If not, leave the section blank and the section won't be rendered in the md.
+- Answer the prompts in the command-line if you wish to include those sections in your README.
+- If you do not wish to include a section, leave the answer blank and the section will not be rendered.
 - For a visual demonstration, please refer to the [tutorial video](https://drive.google.com/file/d/1kDq4fHKREkFLZGivY_sZZGz22gUMCAoO/view)
 
 
@@ -59,5 +58,4 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 - Submit a pull request.
 
 
-## License
 

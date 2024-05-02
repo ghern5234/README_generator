@@ -127,11 +127,11 @@ function renderQuestionsSection(data) {
   } 
   
 if(data.email) {
-    questionsSection += `Email: ${data.email} \n \n`
+    questionsSection += `Email: [${data.email}](mailto:${data.email})</a> \n \n`
   } 
   
 if(data.github) {
-    questionsSection += `GitHub: ${data.github} \n \n`
+    questionsSection += `GitHub: <a href="https://github.com/${data.github}" target="_blank">${data.github}</a> \n \n`
   }
 
 if(questionsSection) {

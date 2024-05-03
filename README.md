@@ -1,5 +1,5 @@
 # README Generator
-
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
 ## Description
@@ -18,6 +18,7 @@ This is a application designed to generate custom README files for your projects
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [License](#license)
 
 
 
@@ -57,5 +58,11 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 - Commit your changes with a descriptive message.
 - Submit a pull request.
 
+
+## License
+
+[MIT]((https://opensource.org/licenses/MIT)) 
+
+Please refer to the [LICENSE](./LICENSE) file for more licensing information.
 
 
